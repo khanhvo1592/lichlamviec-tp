@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lịch Làm Việc Tuần - Văn phòng Thành ủy</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="additional-styles.css">
+    <link rel="stylesheet" href="schedule-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="main-title">
+                    <i class="fas fa-calendar-week"></i>
+                    LỊCH LÀM VIỆC TUẦN
+                </h1>
+                <p class="subtitle">Báo và Phát thanh, Truyền hình Cần Thơ - Tuần 25/08 - 31/08/2025</p>
+            </div>
+        </header>
+
+        <!-- Unit Info -->
+        <div class="unit-info">
+            <div class="unit-header">
+                <div class="unit-icon">
+                    <i class="fas fa-newspaper"></i>
+                </div>
+                <div class="unit-details">
+                    <h2>Báo và Phát thanh, Truyền hình Cần Thơ</h2>
+                    <p><i class="fas fa-map-marker-alt"></i> Trụ sở chính, TP Cần Thơ</p>
+                    <p><i class="fas fa-phone"></i> 0292.3.xxx.xxx | <i class="fas fa-envelope"></i> info@canthotv.vn</p>
+                </div>
+                <div class="unit-status">
+                    <span class="status-badge updated">Đã cập nhật</span>
+                    <p class="update-time">Cập nhật: 25/08/2025 08:00</p>
+                    <p class="view-count"><i class="fas fa-eye"></i> Lượt xem: 266</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Week Navigation -->
+        <div class="week-navigation">
+            <button class="nav-btn week-nav" onclick="previousWeek()">
+                <i class="fas fa-chevron-left"></i>
+                Tuần trước
+            </button>
+            <div class="current-week">
+                <h3>Tuần 25/08/2025 - 31/08/2025</h3>
+                <p>Tuần cuối tháng 8 năm 2025</p>
+            </div>
+            <button class="nav-btn week-nav" onclick="nextWeek()">
+                Tuần tới
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+
+        <!-- View Toggle -->
+        <div class="view-toggle">
+            <button class="view-btn active" data-view="timeline" onclick="switchView('timeline')">
+                <i class="fas fa-stream"></i>
+                <span>Xem Timeline</span>
+            </button>
+            <button class="view-btn" data-view="list" onclick="switchView('list')">
+                <i class="fas fa-list"></i>
+                <span>Xem Danh sách</span>
+            </button>
+        </div>
+
+        <!-- Schedule Grid -->
+        <div class="schedule-container">
+            <!-- Monday -->
+            <div class="day-column">
+                <div class="day-header">
+                    <h3>Thứ 2</h3>
+                    <p class="date">25/08/2025</p>
+                </div>
+                <div class="schedule-items">
+                    <div class="schedule-item morning">
+                        <div class="time">08:00</div>
+                        <div class="content">
+                            <h4>Họp với cán bộ chủ chốt cơ sở 2 về triển khai công tác tuyên truyền theo đơn đặt hàng</h4>
+                            <p><i class="fas fa-users"></i> Đồng chí Thái Hoàng Hinh, đồng chí Lê Hoàng Vinh</p>
+                            <p><i class="fas fa-map-marker-alt"></i> Điểm tại Cơ sở 2</p>
+                            <span class="priority medium">Ưu tiên trung bình</span>
+                        </div>
+                    </div>
+                    <div class="schedule-item morning">
+                        <div class="time">09:00</div>
+                        <div class="content">
+                            <h4>Họp Ban Giám khảo, Tổ Thư ký Cuộc thi chính luận về bảo vệ nền tảng tư tưởng của Đảng</h4>
+                            <p><i class="fas fa-users"></i> Đồng chí Huỳnh Hoàng Mến, đồng chí Tăng Quang Anh</p>
+                            <p><i class="fas fa-map-marker-alt"></i> Điểm tại Văn phòng Thành ủy</p>
+                            <span class="priority medium">Ưu tiên trung bình</span>
+                        </div>
+                    </div>
+                    <div class="schedule-item afternoon">
+                        <div class="time">14:00</div>
+                        <div class="content">
+                            <h4>Khảo sát địa điểm và làm việc về công tác phối hợp tổ chức Chương trình nghệ thuật kỷ niệm 80 năm Cách mạng Tháng Tám</h4>
+                            <p><i class="fas fa-users"></i> Đồng chí Thái Hoàng Hinh, đồng chí Lê Hoàng Vinh</p>
+                            <p><i class="fas fa-map-marker-alt"></i> Điểm tại Công viên Xà No, phường Vị Tân</p>
+                            <span class="priority high">⭐ Ưu tiên cao</span>
+                        </div>
+                    </div>
+                    <div class="schedule-item afternoon">
+                        <div class="time">14:00</div>
+                        <div class="content">
+                            <h4>Khảo sát địa điểm và làm việc về công tác phối hợp tổ chức Chương trình nghệ thuật kỷ niệm 80 năm Cách mạng Tháng Tám</h4>
+                            <p><i class="fas fa-users"></i> Đồng chí Nguyễn Việt Dũng</p>
+                            <p><i class="fas fa-map-marker-alt"></i> Điểm tại Khu Đô thị 5A, phường Phú Lợi</p>
+                            <span class="priority high">⭐ Ưu tiên cao</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tuesday -->
+            <div class="day-column">
+                <div class="day-header">
+                    <h3>Thứ 3</h3>
+                    <p class="date">26/08/2025</p>
+                </div>
+                <div class="schedule-items">
+                    <div class="schedule-item morning">
+                        <div class="time">07:30</div>
+                        <div class="content">
+                            <h4>Họp triển khai Kế hoạch phối hợp lực lượng bảo đảm an ninh, trật tự; phòng cháy, chữa cháy</h4>
+                            <p><i class="fas fa-users"></i> Đồng chí Thái Hoàng Hinh</p>
+                            <p><i class="fas fa-map-marker-alt"></i> Điểm tại Trung tâm Sở Chỉ huy/Ban Chỉ huy phòng thủ khu vực 2 - Vị Tân</p>
+                            <span class="priority high">⭐ Ưu tiên cao</span>
+                        </div>
+                    </div>
+                    <div class="schedule-item morning">
+                        <div class="time">08:00</div>
+                        <div class="content">
+                            <h4>Khảo sát địa điểm và làm việc về công tác phối hợp tổ chức Chương trình Họp mặt và Chương trình nghệ thuật kỷ niệm 80 năm Cách mạng Tháng Tám</h4>
+                            <p><i class="fas fa-users"></i> Đồng chí Lê Thế Huy (Đồng chí Dương Duy Lai, đồng chí Thái Thành Long cùng dự)</p>
+                            <p><i class="fas fa-map-marker-alt"></i> Điểm tại Công viên Tây Đô, phường Hưng Phú</p>
+                            <span class="priority high">⭐ Ưu tiên cao</span>
+                        </div>
+                    </div>
+                    <div class="schedule-item afternoon">
+                        <div class="time">13:30</div>
+                        <div class="content">
+                            <h4>Họp với Lãnh đạo Sở Nông nghiệp và Môi trường về việc xem xét hướng dẫn thủ tục về đất đai</h4>
+                            <p><i class="fas fa-users"></i> Đồng chí Tăng Quang Anh (đồng chí Phạm Kiều Diễm, đồng chí Lê Minh Thiện, đồng chí Võ Thị Hạnh cùng dự)</p>
+                            <p><i class="fas fa-map-marker-alt"></i> Điểm tại số 04, đường Nguyễn Trãi, phường Ninh Kiều</p>
+                            <span class="priority medium">Ưu tiên trung bình</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Wednesday -->
+            <div class="day-column">
+                <div class="day-header">
+                    <h3>Thứ 4</h3>
+                    <p class="date">27/08/2025</p>
+                </div>
+                <div class="schedule-items">
+                    <div class="schedule-item morning">
+                        <div class="time">09:00</div>
+                        <div class="content">
+                            <h4>Họp bàn phương án kỹ thuật Chương trình Họp mặt và Chương trình nghệ thuật kỷ niệm 80 năm Cách mạng Tháng Tám</h4>
+                            <p><i class="fas fa-users"></i> Đồng chí Lê Hoàng Vinh, đồng chí Nguyễn Việt Dũng, đồng chí Lê Thế Huy cùng ekip kỹ thuật xe màu 03 địa điểm</p>
+                            <p><i class="fas fa-map-marker-alt"></i> Điểm tại Phòng họp số 2, Trụ sở chính</p>
+                            <span class="priority high">⭐ Ưu tiên cao</span>
+                        </div>
+                    </div>
+                    <div class="schedule-item morning">
+                        <div class="time">09:30</div>
+                        <div class="content">
+                            <h4>Làm việc với Công ty CPC</h4>
+                            <p><i class="fas fa-users"></i> Đồng chí Thái Hoàng Hinh (Đồng chí Diệp Thùy, đồng chí Ái Vân cùng dự)</p>
+                            <p><i class="fas fa-map-marker-alt"></i> Điểm tại số 51 Trương Văn Diễn, phường Phước Thới</p>
+                            <span class="priority medium">Ưu tiên trung bình</span>
+                        </div>
+                    </div>
+                    <div class="schedule-item morning">
+                        <div class="time">10:00</div>
+                        <div class="content">
+                            <h4>Làm việc với Công ty TNHH Truyền hình Phương Nam</h4>
+                            <p><i class="fas fa-users"></i> Đồng chí Huỳnh Hoàng Mến (Mời: đồng chí Lê Việt Khoa, đồng chí Lê Minh Thiện cùng dự)</p>
+                            <p><i class="fas fa-map-marker-alt"></i> Điểm tại Trụ sở chính</p>
+                            <span class="priority high">⭐ Ưu tiên cao</span>
+                        </div>
+                    </div>
+                    <div class="schedule-item afternoon">
+                        <div class="time">13:30</div>
+                        <div class="content">
+                            <h4>Ký kết hợp tác thông tin tuyên truyền với xã Lai Hòa</h4>
+                            <p><i class="fas fa-users"></i> Đồng chí Nguyễn Văn Triều</p>
+                            <p><i class="fas fa-map-marker-alt"></i> Điểm tại xã Lai Hòa</p>
+                            <span class="priority high">⭐ Ưu tiên cao</span>
+                        </div>
+                    </div>
+                    <div class="schedule-item afternoon">
+                        <div class="time">15:30</div>
+                        <div class="content">
+                            <h4>Ký kết hợp tác thông tin tuyên truyền với Phường Vĩnh Châu</h4>
+                            <p><i class="fas fa-users"></i> Đồng chí Nguyễn Văn Triều</p>
+                            <p><i class="fas fa-map-marker-alt"></i> Điểm tại Phường Vĩnh Châu</p>
+                            <span class="priority high">⭐ Ưu tiên cao</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Thursday -->
+            <div class="day-column">
+                <div class="day-header">
+                    <h3>Thứ 5</h3>
+                    <p class="date">28/08/2025</p>
+                </div>
+                <div class="schedule-items">
+                    <div class="schedule-item morning">
+                        <div class="time">08:00</div>
+                        <div class="content">
+                            <h4>Ký kết hợp tác thông tin tuyên truyền với xã Thạnh Thới An</h4>
+                            <p><i class="fas fa-users"></i> Đồng chí Nguyễn Văn Triều</p>
+                            <p><i class="fas fa-map-marker-alt"></i> Điểm tại xã Thạnh Thới An</p>
+                            <span class="priority medium">Ưu tiên trung bình</span>
+                        </div>
+                    </div>
+                    <div class="schedule-item morning">
+                        <div class="time">08:00</div>
+                        <div class="content">
+                            <h4>Lễ kỷ niệm 80 năm Cách mạng Tháng Tám thành công và trao huy hiệu Đảng</h4>
+                            <p><i class="fas fa-users"></i> Đồng chí Tăng Quang Anh</p>
+                            <p><i class="fas fa-map-marker-alt"></i> Điểm tại Hội trường Đảng ủy phường Cái Khế</p>
+                            <span class="priority high">⭐ Ưu tiên cao</span>
+                        </div>
+                    </div>
+                    <div class="schedule-item morning">
+                        <div class="time">08:00</div>
+                        <div class="content">
+                            <h4>Khảo sát ranh đất thi công hàng rào công trình Đài Phát thanh và Truyền hình tỉnh Sóc Trăng</h4>
+                            <p><i class="fas fa-users"></i> Đồng chí Nguyễn Việt Dũng</p>
+                            <p><i class="fas fa-map-marker-alt"></i> Điểm tại công trình Đài Phát thanh và Truyền hình tỉnh Sóc Trăng</p>
+                            <span class="priority high">⭐ Ưu tiên cao</span>
+                        </div>
+                    </div>
+                    <div class="schedule-item morning">
+                        <div class="time">09:00</div>
+                        <div class="content">
+                            <h4>Lễ công bố Quyết định của Giám đốc Học viện Chính trị quốc gia Hồ Chí Minh về công tác cán bộ</h4>
+                            <p><i class="fas fa-users"></i> Đồng chí Thái Hoàng Hinh</p>
+                            <p><i class="fas fa-map-marker-alt"></i> Hội trường A1, Học viện Chính trị khu vực II</p>
+                            <span class="priority medium">Ưu tiên trung bình</span>
+                        </div>
+                    </div>
+                    <div class="schedule-item afternoon">
+                        <div class="time">14:00</div>
+                        <div class="content">
+                            <h4>Ký kết hợp tác thông tin tuyên truyền với Phường Vĩnh Phước</h4>
+                            <p><i class="fas fa-users"></i> Đồng chí Nguyễn Văn Triều</p>
+                            <p><i class="fas fa-map-marker-alt"></i> Điểm tại Phường Vĩnh Phước</p>
+                            <span class="priority medium">Ưu tiên trung bình</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Friday -->
+            <div class="day-column">
+                <div class="day-header">
+                    <h3>Thứ 6</h3>
+                    <p class="date">29/08/2025</p>
+                </div>
+                <div class="schedule-items">
+                    <div class="schedule-item morning">
+                        <div class="time">08:00</div>
+                        <div class="content">
+                            <h4>Làm việc về công tác tuyên truyền với xã Xà Phiên</h4>
+                            <p><i class="fas fa-users"></i> Đồng chí Thái Hoàng Hinh</p>
+                            <p><i class="fas fa-map-marker-alt"></i> Điểm tại xã Xà Phiên</p>
+                            <span class="priority high">⭐ Ưu tiên cao</span>
+                        </div>
+                    </div>
+                    <div class="schedule-item morning">
+                        <div class="time">09:00</div>
+                        <div class="content">
+                            <h4>Lễ ký kết hợp tác nghiên cứu và chuyển giao tiến bộ kỹ thuật trong sản xuất nông nghiệp</h4>
+                            <p><i class="fas fa-users"></i> Đồng chí Lê Thị Diễm Châu</p>
+                            <p><i class="fas fa-map-marker-alt"></i> Điểm tại Khách sạn Sofitel Sài Gòn</p>
+                            <span class="priority medium">Ưu tiên trung bình</span>
+                        </div>
+                    </div>
+                    <div class="schedule-item afternoon">
+                        <div class="time">13:30</div>
+                        <div class="content">
+                            <h4>Kỳ họp thứ Ba (Kỳ họp chuyên đề) của Hội đồng nhân dân thành phố Cần Thơ khóa X</h4>
+                            <p><i class="fas fa-users"></i> Đồng chí Huỳnh Hoàng Mến</p>
+                            <p><i class="fas fa-map-marker-alt"></i> Điểm tại Hội trường Công an thành phố</p>
+                            <span class="priority medium">Ưu tiên trung bình</span>
+                        </div>
+                    </div>
+                    <div class="schedule-item afternoon">
+                        <div class="time">15:00</div>
+                        <div class="content">
+                            <h4>Ký kết hợp tác thông tin tuyên truyền với Phường Khánh Hoà</h4>
+                            <p><i class="fas fa-users"></i> Đồng chí Nguyễn Văn Triều</p>
+                            <p><i class="fas fa-map-marker-alt"></i> Điểm tại Phường Khánh Hoà</p>
+                            <span class="priority high">⭐ Ưu tiên cao</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Saturday -->
+            <div class="day-column weekend">
+                <div class="day-header">
+                    <h3>Thứ 7</h3>
+                    <p class="date">30/08/2025</p>
+                </div>
+                <div class="schedule-items">
+                    <div class="schedule-item weekend-item">
+                        <div class="time">Nghỉ cuối tuần</div>
+                        <div class="content">
+                            <h4>Không có sự kiện</h4>                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sunday -->
+            <div class="day-column weekend">
+                <div class="day-header">
+                    <h3>Chủ nhật</h3>
+                    <p class="date">31/08/2025</p>
+                </div>
+                <div class="schedule-items">
+                    <div class="schedule-item weekend-item">
+                        <div class="time">Nghỉ cuối tuần</div>
+                        <div class="content">
+                            <h4>Không có sự kiện</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Summary Section -->
+        <div class="summary-section">
+            <div class="summary-card">
+                <h3><i class="fas fa-chart-pie"></i> Tổng kết tuần</h3>
+                <div class="summary-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">25</span>
+                        <span class="stat-label">Sự kiện</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">12</span>
+                        <span class="stat-label">Ưu tiên cao ⭐</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">13</span>
+                        <span class="stat-label">Ưu tiên trung bình</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">7</span>
+                        <span class="stat-label">Ngày trong tuần</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Share and Export Section -->
+        <div class="share-section">
+            <div class="share-card">
+                <h3><i class="fas fa-share-alt"></i> Chia sẻ và Xuất lịch</h3>
+                <div class="share-actions">
+                    <button class="share-btn" onclick="shareSchedule()">
+                        <i class="fas fa-share"></i>
+                        <span>Chia sẻ</span>
+                    </button>
+                    <button class="share-btn" onclick="addToCalendar()">
+                        <i class="fas fa-calendar-plus"></i>
+                        <span>Thêm vào iCal</span>
+                    </button>
+                    <button class="share-btn" onclick="copyLink()">
+                        <i class="fas fa-link"></i>
+                        <span>Sao chép link</span>
+                    </button>
+                    <button class="share-btn" onclick="printSchedule()">
+                        <i class="fas fa-print"></i>
+                        <span>In lịch</span>
+                    </button>
+                    <button class="share-btn" onclick="exportSchedule()">
+                        <i class="fas fa-download"></i>
+                        <span>Xuất PDF</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="navigation">
+            <button class="nav-btn" onclick="goBack()">
+                <i class="fas fa-arrow-left"></i>
+                <span>Quay lại</span>
+            </button>
+        </nav>
+    </div>
+
+    <script src="schedule-script.js"></script>
+</body>
+</html>
